@@ -1,6 +1,5 @@
 # Bodgecycle Computer
 The bodged together bicycle computer for hackers.
-
 ![A picture of my Bodgecycle Computer](http://i.imgur.com/aNQw7sG.jpg)
 
 In order to use Bodgecycle Computer you will need the following components:
@@ -19,9 +18,10 @@ The sandwich bag I got at a [Food Lion](https://www.foodlion.com/). Also
 the first 9v battery I had went dead. The new one came from a [Tractor Supply](https://www.tractorsupply.com/).
 Philosophical discussion of where to source things to come later.
 The total cost of the parts I used
-was about $100. Some of the parts I used were unnecessary. The parts that are
-listed here cost about $91.20. I also used an
-Arduino Uno, which is perhaps not [the cheapest Arduino Uno compatible board](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/).
+was about \$100. Some of the parts I used were unnecessary. The parts that are
+listed here cost about \$91.20. I also used an
+Arduino Uno, which is perhaps not
+[the cheapest Arduino Uno compatible board](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/).
 A person using a SparkFun [RedBoard](https://www.sparkfun.com/products/13975)
 and a minimum of parts could probably build a Bodgecycle Computer for $86.20
 buying from SparkFun.
@@ -73,38 +73,50 @@ food. I have no problem owning animals. I own several in fact. I do have a
 problem with letting them starve to death.
 
 ## Assembly
-This guide will assume that the user is familiar with soldering and Arduino
-assembly. There are many guides available online for how to develop these
+This guide will assume that the user is familiar with [soldering](http://www.sciencebuddies.org/science-fair-projects/project_ideas/Elec_primer-solder.shtml)
+and [Arduino assembly](https://learn.sparkfun.com/tutorials/arduino-shields).
+There are many guides available online for how to develop these
 skills. Attempting to produce a new guide or to replicate one of the existing
 guides would likely not introduce anything useful to the experience of using
 the Bodgecycle Computer. If anything is unclear about how to proceed, please
 open an issue on GitHub.
 
 1. Solder your stackable header set onto the SparkFun GPS Logger Shield.
+![Solder your board](http://i.imgur.com/TZFCenv.jpg)
 2. Insert the GPS Logger Shield into your Arduino Uno compatible board.
+![Line up all your pins](http://i.imgur.com/YPslNxY.jpg)
+![Push down](http://i.imgur.com/Y3eFB2e.jpg)
 3. Insert your coin cell battery into the Arduino Uno
-  * Make sure the positve terminal is facing up
+![Make sure the positive terminal is facing up](http://i.imgur.com/X0OpjMq.jpg)
+  * Make sure the positive terminal is facing up
+![Push it into the holder](http://i.imgur.com/z5CwGGA.jpg)
 
 ## Installation
-This guide will assume that the user is familiar with the Arduino environment.
-There are many guides available online for how to interact with this
-environment. Attempting to produce a new guide or to replicate one of the
+This guide will assume that the user is familiar with the [Arduino](https://www.arduino.cc/)
+environment. There are many
+[guides available online for how to interact with this environment](https://www.arduino.cc/en/Guide/HomePage).
+Attempting to produce a new guide or to replicate one of the
 existing guides would likely not introduce anything useful to the experience of
 using the Bodgecycle Computer. If anything is unclear about how to proceed,
 please open an issue on GitHub.
 
-1. Install the Arduino IDE
+1. Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 2. Open bodgecycle.ino in your IDE
 3. Plug your Arduino into your computer
 4. Make sure to select Arduino/Genuino Uno as the type of board you're using
+![Arduino/Genuino Uno](http://i.imgur.com/qLa8NFZ.jpg)
 5. Make sure that the serial port your Arduino is connected to is selected
+![Serial port selection](http://i.imgur.com/gwHw4W7.png)
 6. Upload your code to the Arduino
+![Upload code](http://i.imgur.com/HqQ5HfC.png)
 
 ## Usage
 Before you can start recording data, you need to insert the micro SD card into
 the micro SD card slot on your GPS Logger Shield. I don't really know how to
 explain how to do that better. If this instruction is unclear, please open an
 issue on GitHub.
+![The micro SD slot is the one that lines up right above the USB port](http://i.imgur.com/2noKay1.jpg)
+![Push the micro SD card in until you hear it click](http://i.imgur.com/rhpKQqM.jpg)
 
 Now that your SD card is in place, ready to receive data, you should be able to
 insert your 9v battery into your 9v battery holder and plug your 9v battery
@@ -112,10 +124,17 @@ holder into the DC voltage jack on your Arduino Uno compatible board. Once
 power is supplied to the board, it will start recording data as soon as a GPS
 signal has been fixed. In order to stop recording, unplug your 9v battery from
 your Arduino board.
+![Battery and holder](http://i.imgur.com/Qh3AblE.jpg)
+![Battery inserted](http://i.imgur.com/LQMKJG8.jpg)
+![Recording data](http://i.imgur.com/H9VTk92.jpg)
 
 Now you can take the micro SD card out of your GPS Logger Shield, put it in an
 adapter of some sort, plug that adapter into your computer, and open the GPX
-file you have recorded in some sort of GPX visualization software.
+file you have recorded in some sort of [GPX visualization software](http://www.gpsvisualizer.com/).
+![SD converter](http://i.imgur.com/EPlMlSY.jpg)
+![More SD converter](http://i.imgur.com/xwB4yUw.jpg)
+![Into the computer](http://i.imgur.com/eROZaRi.jpg)
+![Again, listen for a click](http://i.imgur.com/Gzp8oLM.jpg)
 
 ## Limitations
 A Bodgecycle Computer can only store 10 files at a time. Hopefully, this can
@@ -144,6 +163,7 @@ is about 3:160,000 against. In other words you have a .002% chance of doing
 that. You shouldn't worry about it too much, but it can happen.
 
 The goal of the Bodgecycle Computer project is to create something that can
-create data that can be uploaded and stored on the website Strava. I don't know
+create data that can be uploaded and stored on the website [Strava](strava.com). I don't know
 right now if that will work. If you are interested in building a Bodgecycle
 Computer and testing this functionality, I would be very happy.
+
