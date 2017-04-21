@@ -1,6 +1,8 @@
 # Bodgecycle Computer
 The bodged together bicycle computer for hackers.
 
+![A picture of my Bodgecycle Computer](http://i.imgur.com/aNQw7sG.jpg)
+
 In order to use Bodgecycle Computer you will need the following components:
 1. An Arduino Uno or compatible board
 2. A USB cable compatible with your chosen Arduino board
@@ -12,7 +14,8 @@ In order to use Bodgecycle Computer you will need the following components:
 8. A 9v battery holder
 
 I sourced all of these parts from SparkFun. The total cost of the parts I used
-was about $100. Some of the parts I used were unnecessary, and I also used an
+was about $100. Some of the parts I used were unnecessary. The parts that are
+listed here cost about $91.20. I also used an
 Arduino Uno, which is perhaps not the cheapest Arduino Uno compatible board.
 A person using a SparkFun RedBoard and a minimum of parts could probably build
 a Bodgecycle Computer for $86.20 buying from SparkFun.
@@ -24,6 +27,9 @@ Computer built by Travis Rigg. Users choosing to use a different board will
 also have to find their own way to power their board. Users choosing to use a
 different board will also be required to know how to upload code to their board
 of choice.
+
+A better way to save some money building this project that could still be expected
+to work reliably would be to purchase a smaller and cheaper micro SD card.
 
 ## Assembly
 This guide will assume that the user is familiar with soldering and Arduino
