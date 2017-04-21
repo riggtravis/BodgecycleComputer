@@ -85,7 +85,7 @@ open an issue on GitHub.
 ![Solder your board](http://i.imgur.com/TZFCenv.jpg)
 2. Insert the GPS Logger Shield into your Arduino Uno compatible board.
 ![Line up all your pins](http://i.imgur.com/YPslNxY.jpg)
-![Push down](http://i.imgur.com/Y3eFB2e.jpg)
+![Push down](http://i.imgur.com/GaE2MUe.jpg)
 3. Insert your coin cell battery into the Arduino Uno
 ![Make sure the positive terminal is facing up](http://i.imgur.com/X0OpjMq.jpg)
   * Make sure the positive terminal is facing up
