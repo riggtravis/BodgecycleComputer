@@ -4,9 +4,9 @@ The bodged together bicycle computer for hackers.
 ![A picture of my Bodgecycle Computer](http://i.imgur.com/aNQw7sG.jpg)
 
 In order to use Bodgecycle Computer you will need the following components:
-1. An Arduino Uno or compatible board
+1. An [Arduino Uno](https://www.arduino.cc/en/Main/arduinoBoardUno) or [compatible board](https://www.sainsmart.com/arduino/control-boards/sainsmart-uno-r3-atmega328-au-development-board-compatible-with-arduino-uno-r3.html)
 2. A USB cable compatible with your chosen Arduino board
-3. A SparkFun GPS Logger Shield
+3. A [SparkFun GPS Logger Shield](https://www.sparkfun.com/products/13750)
 4. An Arduino stackable header set
 5. A 12mm coin cell battery
 6. A micro SD card
@@ -21,12 +21,17 @@ A person using a SparkFun RedBoard and a minimum of parts could probably build
 a Bodgecycle Computer for $86.20 buying from SparkFun.
 
 Users comfortable with system voltage could likely shave a further $5-8 off the
-cost of this build by using an Arduino Pro or Diavolino. Changing boards
+cost of this build by using an Arduino Pro, Diavolino, or Canaduino. Changing boards
 however is not guaranteed to have same results of the reference Bodgecycle
 Computer built by Travis Rigg. Users choosing to use a different board will
 also have to find their own way to power their board. Users choosing to use a
 different board will also be required to know how to upload code to their board
 of choice.
+
+Users who are satisfied with the first version of the Bodgecycle Computer can also
+save some money by getting regular headers instead of stacking headers. This is not
+recommended however because future updates may require more shields than just a GPS
+logger shield.
 
 A better way to save some money building this project that could still be expected
 to work reliably would be to purchase a smaller and cheaper micro SD card.
