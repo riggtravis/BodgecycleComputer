@@ -7,34 +7,70 @@ In order to use Bodgecycle Computer you will need the following components:
 1. An [Arduino Uno](https://www.arduino.cc/en/Main/arduinoBoardUno) or [compatible board](https://www.sainsmart.com/arduino/control-boards/sainsmart-uno-r3-atmega328-au-development-board-compatible-with-arduino-uno-r3.html)
 2. A USB cable compatible with your chosen Arduino board
 3. A [SparkFun GPS Logger Shield](https://www.sparkfun.com/products/13750)
-4. An Arduino stackable header set
-5. A 12mm coin cell battery
-6. A micro SD card
-7. A 9v battery
-8. A 9v battery holder
+4. An [Arduino stackable header set](https://www.sparkfun.com/products/11417)
+5. A [12mm coin cell battery](https://www.sparkfun.com/products/337)
+6. A [micro SD card](https://www.amazon.com/SANDISK-Micro-SDHC-Memory-SDSDQM-004G/dp/B001C0DJL4/ref=sr_1_2?s=pc&ie=UTF8&qid=1492750170&sr=1-2&keywords=sandisk+4gb+microsdhc+memory+card)
+7. A [9v battery](https://www.amazon.com/AmazonBasics-Everyday-Alkaline-Batteries-8-Pack/dp/B00MH4QM1S/ref=sr_1_2_s_it?s=hpc&srs=2528919011&ie=UTF8&qid=1492750284&sr=1-2)
+8. A [9v battery holder](https://www.adafruit.com/product/67)
+9. A [sandwich bag](https://www.amazon.com/Glad-Food-Storage-Snack-Zipper/dp/B00ZKUCFUS/ref=sr_1_4_s_it?ie=UTF8&qid=1492750504&sr=1-4) for wet rides
 
-I sourced all of these parts from SparkFun. The total cost of the parts I used
+I sourced all of these parts except for the sandwhich bag from [SparkFun](https://www.sparkfun.com/).
+The sandwich bag I got at a [Food Lion](https://www.foodlion.com/). Also
+the first 9v battery I had went dead. The new one came from a [Tractor Supply](https://www.tractorsupply.com/).
+Philosophical discussion of where to source things to come later.
+The total cost of the parts I used
 was about $100. Some of the parts I used were unnecessary. The parts that are
 listed here cost about $91.20. I also used an
-Arduino Uno, which is perhaps not the cheapest Arduino Uno compatible board.
-A person using a SparkFun RedBoard and a minimum of parts could probably build
-a Bodgecycle Computer for $86.20 buying from SparkFun.
+Arduino Uno, which is perhaps not [the cheapest Arduino Uno compatible board](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/).
+A person using a SparkFun [RedBoard](https://www.sparkfun.com/products/13975)
+and a minimum of parts could probably build a Bodgecycle Computer for $86.20
+buying from SparkFun.
 
 Users comfortable with system voltage could likely shave a further $5-8 off the
-cost of this build by using an Arduino Pro, Diavolino, or Canaduino. Changing boards
+cost of this build by using an Arduino Pro, [Diavolino](http://shop.evilmadscientist.com/productsmenu/180),
+or [Canaduino](https://universal-solder.com/product/canaduino-uno-bone-basic-alternative-arduino-uno-r3-atmega328p-pu/).
+Changing boards
 however is not guaranteed to have same results of the reference Bodgecycle
 Computer built by Travis Rigg. Users choosing to use a different board will
 also have to find their own way to power their board. Users choosing to use a
 different board will also be required to know how to upload code to their board
 of choice.
 
+Bottom line, if you want to use a different board, feel free to do so, but don't
+think it's my responsibility to bail you out, or to accept your fixes to your
+problems. If you create a pull request that doesn't work with the Arduino Uno R3,
+I'm not going to merge it. If you create a pull request that works with your board
+and it still works with the Arduino Uno R3, I will probably accept this change. If
+someone creates a pull request that I merge that breaks another board I don't care
+about, you're going to be sorta on your own.
+
 Users who are satisfied with the first version of the Bodgecycle Computer can also
-save some money by getting regular headers instead of stacking headers. This is not
+save some money by getting [regular headers](https://www.sparkfun.com/products/116)
+instead of stacking headers. This is not
 recommended however because future updates may require more shields than just a GPS
 logger shield.
 
 A better way to save some money building this project that could still be expected
-to work reliably would be to purchase a smaller and cheaper micro SD card.
+to work reliably would be to purchase a smaller and cheaper micro SD card. The one
+I have linked in the parts list above is smaller and cheaper than the one I bought
+from SparkFun. It should be satisfactory enough.
+
+Users should also feel free to purchase parts their choice of retailer. I used
+SparkFun because their website was easier for me to navigate than Adafruit
+and I wanted to buy everything from one place. SparkFun's miniature version
+of the GPS Logger Shield was also a big boon. I also, for personal reasons,
+did want to buy products that supported the developers of the Arduino boards.
+Certain Arduino clones don't help support Arduino development. Where you fall
+on that philosophical line is up to you.
+
+I do however ask that users not purchase parts from Tractor Supply. I know I
+mentioned earlier that I got one of the batteries I used from there, but that
+was back when they were the only retailer I could get certain products from. I
+always encourage people not to go there if for no other reason than that I have
+never been to a Tractor Supply during Chick Days without at least one dead
+chicken that they refuse to remove and a chick habitat without enough water or
+food. I have no problem owning animals. I own several in fact. I do have a
+problem with letting them starve to death.
 
 ## Assembly
 This guide will assume that the user is familiar with soldering and Arduino
@@ -91,6 +127,13 @@ that becomes a problem. A Bodgecycle Computer with a low battery is a very
 unstable thing. An easy indication that your Bodgecycle Computer is low on
 battery is when there are more files for recorded rides than you would expect
 and the files contain incomplete data.
+
+Users who feel confident in their ability to edit the code of this project can
+try to use an [Adafruit Ultimate GPS Shield](https://www.adafruit.com/product/1272)
+instead of the SparkFun GPS Logger shield. That shield is claimed to have a lower
+battery draw than other similar shields (which as far as I can tell is basically
+just the SparkFun one). A future update of the Bodgecycle computer may even be based
+on that shield depending on how this project goes.
 
 There is a very low chance that when you unplug the battery from your
 Bodgecycle Computer that you will interrupt the writing of data. You don't need
