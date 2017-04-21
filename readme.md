@@ -82,7 +82,7 @@ the Bodgecycle Computer. If anything is unclear about how to proceed, please
 open an issue on GitHub.
 
 1. Solder your stackable header set onto the SparkFun GPS Logger Shield.
-![Solder your board](http://i.imgur.com/TZFCenv.jpg)
+![Solder your board](http://i.imgur.com/CCHxAFO.jpg)
 2. Insert the GPS Logger Shield into your Arduino Uno compatible board.
 ![Line up all your pins](http://i.imgur.com/YPslNxY.jpg)
 ![Push down](http://i.imgur.com/GaE2MUe.jpg)
