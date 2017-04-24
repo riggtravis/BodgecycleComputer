@@ -6,8 +6,8 @@ you should be aware of what the version numbers mean.
 Each of the numbers in a Bodgecycle Computer's version number represents
 something about the Bodgecycle Computer. The version number of a Bodgecycle
 Computer is in an X.X.X.X format. Often times, numbers are omitted. If a number
-is omitted, you can assume that is a zero. 1 is the same as 1.0 is the same as
-1.0.0 is the same as 1.0.0.0
+is omitted, you can assume that it is a zero. 1 is the same as 1.0 is the same
+as 1.0.0 is the same as 1.0.0.0
 
 Included in this document is a history of the versions that have come to pass
 as well as the versions that are immediately planned. An immediately planned
@@ -94,6 +94,11 @@ For example, the goal is to eventually take the 1.0.X.X series and port it to
 the Arduino Pro Mini 328 3.3V 8MHz. Whether or not this happens in the future
 will largely depend on what factors and limitations are discovered as the
 1.0.X.X series is developed.
+
+The next architecture is also usually planned in some manner, but it is even
+less concrete than the next form factor release. Even if I have listed a future
+architecture, you can assume that it will change and that you shouldn't plan a
+purchase around it until it is listed in the milestones under issues in GitHub.
 
 Most likely, once an architecture is no longer able to handle the expectations
 of the Bodgecycle Computer project, a new form factor release of the previous
