@@ -21,6 +21,21 @@ this Bodgecycle Computer?
 
 ## History/Plans
 1. ATmega328
+2. ATSAMD21G18
+
+**NOTE:** All of the other future versions listed here are in the very
+immediate future. The switch to an ATSAMD21G18 processor is not going to be
+part of any of the next three releases to this project. The timeframe in which
+changes in architecture will occur is much more of a mystery than other
+changes. A change in architecture usually indicates that the previous of the
+previous generation.
+
+The reason I am sure that the architecture will be the ATSAMD21G18 is pricing,
+software support, and specifications. I don't know when I'll be using all of
+the ATmega328's SRAM, but I do know it will happen eventually. At this time I
+believe it is unlikely that I will need an architecture with different
+features rather than better specs, so the ATSAMD21G18 should be fine when
+compared to something like the Intel Curie.
 
 # The second number
 The second number represents form factor. What specific development board was
@@ -35,7 +50,7 @@ project is available to you under an MIT/Expat License. Everything is provided
 as is, without warranty, or any guarantee of usefulness.
 
 ## History/Plans
-1. *1.0*: Arduino Uno
+1. **1.0**: Arduino Uno
   * SparkFun Redboard
   * InVentor
   * Richduino
@@ -45,14 +60,21 @@ as is, without warranty, or any guarantee of usefulness.
   * DT-AVR Unoduino
   * ArduBoard
   * Visduino
+2. **1.1**: Diavolino
+  * Arduino Duemilanove
+  * Arduino Pro
+  * All boards from the **1.0** series
+  * Cosmo Black Star
+  * ARD128D2P
+  * Seeeduino V2.21
 
 # The third number
 The third number represents what hardware needs to be attached to the
 Bodgecycle Computer to make it work.
 
 ## History/Plans
-1. *1.0.0*: Sparkfun GPS Logger Shield
-2. *1.0.1*: Sparkfun LiPower Shield
+1. **1.0.0**: Sparkfun GPS Logger Shield
+2. **1.0.1**: Sparkfun LiPower Shield
 
 # The fourth number
 The fourth number represents software. Any Bodgecycle computer sharing the
@@ -62,8 +84,8 @@ generations of architectures, form factors, and hardware will be left in the
 repository for future users to utilize.
 
 ## History/Plans
-1. *1.0.0.0*: Basic functionality and interoperability with popular services
-2. *1.0.0.1*: Battery optimization
+1. **1.0.0.0**: Basic functionality and interoperability with popular services
+2. **1.0.0.1**: Battery optimization
 
 # Future Versions
 As a general rule, only the next hardware release is concretely planned. A new
@@ -76,6 +98,7 @@ will largely depend on what factors and limitations are discovered as the
 Most likely, once an architecture is no longer able to handle the expectations
 of the Bodgecycle Computer project, a new form factor release of the previous
 x.X.X.X series will be made before shifting all efforts to the new
-architecture. For this reason an x.1 release can essentially be considered as
-the final and complete product of an X.x.x.x series. This is of course not to
-rule out an x.2 release. It's just to say that they're extremely unlikely.
+architecture. For this reason an x.X release made just before an X release
+can be considered to be the final version of that line. There is the
+possibility that a new form factor will come about even after that, but it is
+highly unlikely.
