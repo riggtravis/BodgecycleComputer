@@ -20,12 +20,12 @@ The first number represents architecture. What processor was used to create
 this Bodgecycle Computer?
 
 ## History/Plans
-1. ATmega328
-2. ATSAMD21G18
+1. [ATmega328](http://www.microchip.com/wwwproducts/en/ATmega328)
+2. [ATSAMD21G18](http://www.microchip.com/wwwproducts/en/ATSAMD21G18)
 
 **NOTE:** All of the other future versions listed here are in the very
 immediate future. The switch to an ATSAMD21G18 processor is not going to be
-part of any of the next three releases to this project. The timeframe in which
+part of any of the next three releases to this project. The time frame in which
 changes in architecture will occur is much more of a mystery than other
 changes. A change in architecture usually indicates that the previous of the
 previous generation.
@@ -35,7 +35,8 @@ software support, and specifications. I don't know when I'll be using all of
 the ATmega328's SRAM, but I do know it will happen eventually. At this time I
 believe it is unlikely that I will need an architecture with different
 features rather than better specs, so the ATSAMD21G18 should be fine when
-compared to something like the Intel Curie.
+compared to something like the
+[Intel Curie](http://www.intel.com/content/www/us/en/wearables/wearable-soc.html).
 
 # The second number
 The second number represents form factor. What specific development board was
@@ -46,35 +47,41 @@ each board are a few compatible boards that you should be able to trust.
 
 Please note that compatible boards are not promised to be compatible. Use at
 your own risk. Your mileage may vary. Please also keep in mind that this
-project is available to you under an MIT/Expat License. Everything is provided
-as is, without warranty, or any guarantee of usefulness.
+project is available to you under an
+[MIT/Expat License](https://opensource.org/licenses/MIT). Everything is
+provided as is, without warranty, or any guarantee of usefulness.
 
 ## History/Plans
-1. **1.0**: Arduino Uno
-  * SparkFun Redboard
-  * InVentor
-  * Richduino
-  * NerO
-  * Eleven
-  * Brasuino
-  * DT-AVR Unoduino
+1. **1.0**: [Arduino Uno](https://www.arduino.cc/en/main/arduinoBoardUno)
+  * [SparkFun Redboard](https://www.sparkfun.com/products/13975)
+  * [InVentor](http://www.ventor.co.in/arduino-freeduino-c-16/inventor-uno-dip-arduino-compatible-board-p-86.html)
+  * [Richduino](http://www.embeddedmarket.com/products/Richduino-UNOBasic-For-Arduino-with-Female-Headers/)
+  * [NerO](http://brtchip.com/m-nero/)
+  * [Eleven](https://www.freetronics.com.au/products/eleven)
+  * [Brasuino](http://brasuino.holoscopio.com/)
+  * [DT-AVR Unoduino](http://www.innovativeelectronics.com/index.php?pg=ie_pdet&idp=30<Paste>)
   * ArduBoard
-  * Visduino
-2. **1.1**: Diavolino
-  * Arduino Duemilanove
-  * Arduino Pro
+  * [Visduino](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/)
+	* [EDArduino](http://www.electrodragon.com/product/edarduino-uno-c-arduino-compatible-r3-board-ch340/)
+2. **1.1**: [Diavolino](http://shop.evilmadscientist.com/productsmenu/180)
+  * [Arduino Duemilanove](https://www.arduino.cc/en/Main/ArduinoBoardDuemilanove)
+  * [Arduino Pro](https://www.arduino.cc/en/Main/arduinoBoardPro)
   * All boards from the **1.0** series
   * Cosmo Black Star
-  * ARD128D2P
-  * Seeeduino V2.21
+  * [ARD128D2P](http://www.mouser.com/ProductDetail/Seeed-Studio/ARD128D2P/?qs=Z7P4xsdcg2KZ%2FKLaQEtC9g%3D%3D)
+  * [Seeeduino V2.21](http://wiki.seeedstudio.com/wiki/Seeeduino_v2.21)
+  * Androino 2099
+  * Comet
 
 # The third number
 The third number represents what hardware needs to be attached to the
 Bodgecycle Computer to make it work.
 
 ## History/Plans
-1. **1.0.0**: Sparkfun GPS Logger Shield
-2. **1.0.1**: Sparkfun LiPower Shield
+1. **1.0.0**:
+[Sparkfun GPS Logger Shield](https://www.sparkfun.com/products/13750)
+2. **1.0.1**:
+[Sparkfun LiPower Shield](https://www.sparkfun.com/products/13158)
 
 # The fourth number
 The fourth number represents software. Any Bodgecycle computer sharing the
