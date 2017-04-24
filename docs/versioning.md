@@ -62,7 +62,7 @@ provided as is, without warranty, or any guarantee of usefulness.
   * [DT-AVR Unoduino](http://www.innovativeelectronics.com/index.php?pg=ie_pdet&idp=30<Paste>)
   * ArduBoard
   * [Visduino](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/)
-	* [EDArduino](http://www.electrodragon.com/product/edarduino-uno-c-arduino-compatible-r3-board-ch340/)
+  * [EDArduino](http://www.electrodragon.com/product/edarduino-uno-c-arduino-compatible-r3-board-ch340/)
 2. **1.1**: [Diavolino](http://shop.evilmadscientist.com/productsmenu/180)
   * [Arduino Duemilanove](https://www.arduino.cc/en/Main/ArduinoBoardDuemilanove)
   * [Arduino Pro](https://www.arduino.cc/en/Main/arduinoBoardPro)
