@@ -55,8 +55,8 @@ expected to work reliably would be to purchase a smaller and cheaper micro SD
 card. The one I have linked in the parts list above is smaller and cheaper than
 the one I bought from SparkFun. It should be satisfactory enough.
 
-Users should also feel free to purchase parts their choice of retailer. I used
-SparkFun because their website was easier for me to navigate than Adafruit
+Users should also feel free to purchase parts from their choice of retailer. I
+used SparkFun because their website was easier for me to navigate than Adafruit
 and I wanted to buy everything from one place. SparkFun's miniature version
 of the GPS Logger Shield was also a big boon. I also, for personal reasons,
 did want to buy products that supported the developers of the Arduino boards.
