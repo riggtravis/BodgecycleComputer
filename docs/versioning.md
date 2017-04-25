@@ -41,9 +41,9 @@ compared to something like the
 # The second number
 The second number represents form factor. What specific development board was
 used to create this Bodgecycle Computer? It should be noted that the board
-listed is the board is the board that was used to create the Bodgecycle
-Computer in question. Compatible boards should be perfectly fine. Listed after
-each board are a few compatible boards that you should be able to trust.
+listed is the board that was used to create the Bodgecycle Computer in question.
+Compatible boards should be perfectly fine. Listed after each board are a few
+compatible boards that you should be able to trust.
 
 Please note that compatible boards are not promised to be compatible. Use at
 your own risk. Your mileage may vary. Please also keep in mind that this
