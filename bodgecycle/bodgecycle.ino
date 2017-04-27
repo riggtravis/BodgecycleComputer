@@ -272,15 +272,45 @@ void printTime()
     logFile.print(F("<time>"));
     logFile.print(tinyGPS.date.year());
     logFile.print(F("-"));
+
+    if(tinyGPS.date.month() < 10)
+    {
+      logFile.print(0);
+    }
     logFile.print(tinyGPS.date.month());
+
     logFile.print(F("-"));
+
+    if(tinyGPS.date.day() < 10)
+    {
+      logFile.print(0);
+    }
     logFile.print(tinyGPS.date.day());
+
     logFile.print(F("T"));
+
+    if(tinyGPS.time.hour() < 10)
+    {
+      logFile.print(0);
+    }
     logFile.print(tinyGPS.time.hour());
+
     logFile.print(F(":"));
+
+    if(tinyGPS.time.minute() < 10)
+    {
+      logFile.print(0);
+    }
     logFile.print(tinyGPS.time.minute());
+
     logFile.print(F(":"));
+
+    if(tinyGPS.time.second() < 10)
+    {
+      logFile.print(0);
+    }
     logFile.print(tinyGPS.time.second());
+
     logFile.print(F("."));
     logFile.print(tinyGPS.time.centisecond());
     logFile.print(F("Z</time>"));
