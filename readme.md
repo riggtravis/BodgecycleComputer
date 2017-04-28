@@ -103,6 +103,12 @@ an issue on GitHub.
 
 1. Install the [Arduino IDE](https://www.arduino.cc/en/Main/Software)
 2. Open bodgecycle.ino in your IDE
+3. Download and install
+[TinyGPS++](http://arduiniana.org/libraries/tinygpsplus/)
+  * Follow the installation directions provided by Mikal Heart on his website,
+  Arduiniana
+  * Doing this step has been different on different computers, so I can't give
+  better advice than this
 3. Plug your Arduino into your computer
 4. Make sure to select Arduino/Genuino Uno as the type of board you're using
 ![Arduino/Genuino Uno](http://i.imgur.com/qLa8NFZ.jpg)
