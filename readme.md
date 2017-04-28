@@ -116,12 +116,12 @@ an issue on GitHub.
   Arduiniana
   * Doing this step has been different on different computers, so I can't give
   better advice than this
-3. Plug your Arduino into your computer
-4. Make sure to select Arduino/Genuino Uno as the type of board you're using
+4. Plug your Arduino into your computer
+5. Make sure to select Arduino/Genuino Uno as the type of board you're using
 ![Arduino/Genuino Uno](http://i.imgur.com/qLa8NFZ.jpg)
-5. Make sure that the serial port your Arduino is connected to is selected
+6. Make sure that the serial port your Arduino is connected to is selected
 ![Serial port selection](http://i.imgur.com/gwHw4W7.png)
-6. Upload your code to the Arduino
+7. Upload your code to the Arduino
 ![Upload code](http://i.imgur.com/HqQ5HfC.png)
 
 ## Usage
