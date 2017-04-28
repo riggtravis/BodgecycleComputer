@@ -10,6 +10,13 @@ In order to use Bodgecycle Computer you will need the following components:
 5. A [12mm coin cell battery](https://www.sparkfun.com/products/337)
 6. A [micro SD card](https://www.amazon.com/SANDISK-Micro-SDHC-Memory-SDSDQM-004G/dp/B001C0DJL4/ref=sr_1_2?s=pc&ie=UTF8&qid=1492750170&sr=1-2&keywords=sandisk+4gb+microsdhc+memory+card)
 7. A [9v battery](https://www.amazon.com/AmazonBasics-Everyday-Alkaline-Batteries-8-Pack/dp/B00MH4QM1S/ref=sr_1_2_s_it?s=hpc&srs=2528919011&ie=UTF8&qid=1492750284&sr=1-2)
+  * I have a few recommendations based on my experience with this project
+  * These recommendations come from [wisebread](http://www.wisebread.com/the-5-best-9-volt-batteries)
+    * AmazonBasics: Cheap. You can replace these a bunch
+    * Energizer Advanced Lithium: Long battery life.
+    * Duracell Procell: reliable and predictable. (These are now my preferred)
+    * EBL High Volume: Rechargable. So that's fun.
+    * Duracell Coppertop: Yup.
 8. A [9v battery holder](https://www.adafruit.com/product/67)
 9. A [sandwich bag](https://www.amazon.com/Glad-Food-Storage-Snack-Zipper/dp/B00ZKUCFUS/ref=sr_1_4_s_it?ie=UTF8&qid=1492750504&sr=1-4) for wet rides
 
