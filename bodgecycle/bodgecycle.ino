@@ -275,7 +275,7 @@ void printTime()
 
     if(tinyGPS.date.month() < 10)
     {
-      logFile.print(0);
+      logFile.print(F("0"));
     }
     logFile.print(tinyGPS.date.month());
 
@@ -283,7 +283,7 @@ void printTime()
 
     if(tinyGPS.date.day() < 10)
     {
-      logFile.print(0);
+      logFile.print(F("0"));
     }
     logFile.print(tinyGPS.date.day());
 
@@ -291,7 +291,7 @@ void printTime()
 
     if(tinyGPS.time.hour() < 10)
     {
-      logFile.print(0);
+      logFile.print(F("0"));
     }
     logFile.print(tinyGPS.time.hour());
 
@@ -299,7 +299,7 @@ void printTime()
 
     if(tinyGPS.time.minute() < 10)
     {
-      logFile.print(0);
+      logFile.print(F("0"));
     }
     logFile.print(tinyGPS.time.minute());
 
@@ -307,7 +307,7 @@ void printTime()
 
     if(tinyGPS.time.second() < 10)
     {
-      logFile.print(0);
+      logFile.print(F("0"));
     }
     logFile.print(tinyGPS.time.second());
 
