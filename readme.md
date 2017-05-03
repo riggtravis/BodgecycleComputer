@@ -10,6 +10,13 @@ In order to use Bodgecycle Computer you will need the following components:
 5. A [12mm coin cell battery](https://www.sparkfun.com/products/337)
 6. A [micro SD card](https://www.amazon.com/SANDISK-Micro-SDHC-Memory-SDSDQM-004G/dp/B001C0DJL4/ref=sr_1_2?s=pc&ie=UTF8&qid=1492750170&sr=1-2&keywords=sandisk+4gb+microsdhc+memory+card)
 7. A [9v battery](https://www.amazon.com/AmazonBasics-Everyday-Alkaline-Batteries-8-Pack/dp/B00MH4QM1S/ref=sr_1_2_s_it?s=hpc&srs=2528919011&ie=UTF8&qid=1492750284&sr=1-2)
+  * I have a few recommendations based on my experience with this project
+  * These recommendations come from [wisebread](http://www.wisebread.com/the-5-best-9-volt-batteries)
+    * AmazonBasics: Cheap. You can replace these a bunch
+    * Energizer Advanced Lithium: Long battery life.
+    * Duracell Procell: reliable and predictable. (These are now my preferred)
+    * EBL High Volume: Rechargable. So that's fun.
+    * Duracell Coppertop: Yup.
 8. A [9v battery holder](https://www.adafruit.com/product/67)
 9. A [sandwich bag](https://www.amazon.com/Glad-Food-Storage-Snack-Zipper/dp/B00ZKUCFUS/ref=sr_1_4_s_it?ie=UTF8&qid=1492750504&sr=1-4) for wet rides
 
@@ -35,6 +42,10 @@ Bodgecycle Computer built by Travis Rigg. Users choosing to use a different
 board will also have to find their own way to power their board. Users choosing
 to use a different board will also be required to know how to upload code to
 their board of choice.
+
+It is worth noting that I have done a little bit of testing with a Diavolino.
+It didn't work for me, but all I did was plug in the shield, see that it didn't
+work, and then added this statement to this readme file.
 
 Bottom line, if you want to use a different board, feel free to do so, but
 don't think it's my responsibility to bail you out, or to accept your fixes to
@@ -109,12 +120,12 @@ an issue on GitHub.
   Arduiniana
   * Doing this step has been different on different computers, so I can't give
   better advice than this
-3. Plug your Arduino into your computer
-4. Make sure to select Arduino/Genuino Uno as the type of board you're using
+4. Plug your Arduino into your computer
+5. Make sure to select Arduino/Genuino Uno as the type of board you're using
 ![Arduino/Genuino Uno](http://i.imgur.com/qLa8NFZ.jpg)
-5. Make sure that the serial port your Arduino is connected to is selected
+6. Make sure that the serial port your Arduino is connected to is selected
 ![Serial port selection](http://i.imgur.com/gwHw4W7.png)
-6. Upload your code to the Arduino
+7. Upload your code to the Arduino
 ![Upload code](http://i.imgur.com/HqQ5HfC.png)
 
 ## Usage
