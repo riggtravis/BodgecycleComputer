@@ -43,6 +43,10 @@ board will also have to find their own way to power their board. Users choosing
 to use a different board will also be required to know how to upload code to
 their board of choice.
 
+It is worth noting that I have done a little bit of testing with a Diavolino.
+It didn't work for me, but all I did was plug in the shield, see that it didn't
+work, and then added this statement to this readme file.
+
 Bottom line, if you want to use a different board, feel free to do so, but
 don't think it's my responsibility to bail you out, or to accept your fixes to
 your problems. If you create a pull request that doesn't work with the Arduino
