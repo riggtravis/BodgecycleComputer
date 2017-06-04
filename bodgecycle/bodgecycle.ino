@@ -3,51 +3,54 @@
  * Track bike rides using Arduino
  * By Travis Rigg
  * April 15, 2017
- * 
+ *
  * Based on:
  *  CSV_Logger_TinyGPSPlus.ino
  *  Log GPS data to a CSV file on a uSD card
  *  By Jim Lindblom @ SparkFun Electronics
  *  February 9, 2016
  *  https://github.com/sparkfun/GPS_Shield
- * 
+ *
  * Inspired by:
  *  Geo Tracker
  *  A GPS Tracker for Android
  *  By Ilya Bogdanovich
  *  August 10, 2016
  *  https://geo-tracker.org
- *  
+ *
  *  Arduino GPS Logger
- *  A functional logger and a good lesson about GPS modules, NMEA, and SD/FAT from Arduino
+ *  A functional logger and a good lesson about GPS modules, NMEA, and SD/FAT
+ *    from Arduino
  *  By Mark Fickett
  *  Jan 4, 2016
  *  https://github.com/markfickett/gpslogger
- *  
+ *
  *  OpenStreetMap
- *  A map built by a community of mappers that contribute and maintain data about roads, trails, cafes, and more
+ *  A map built by a community of mappers that contribute and maintain data
+ *    about roads, trails, cafes, and more
  *  By OpenStreetMap contributors
  *  www.openstreetmap.org
- * 
- * Bodgecycle Computer uses an Arduino Uno to record GPS information to a uSD card as
- * a .gpx file. This .gpx file can then be uploaded to a website like Strava. This
- * means that cyclists with an interest in Arduino can quickly have a working GPS unit
- * that they can use instead of a smartphone. The advantage of this is that their
- * phone battery will be left in tact.
- * 
- * Cyclists who already have a dedicated GPS head unit will likely be more interested
- * in continuing to use that rather than using the Bodgecycle Computer. Cyclists who
- * just want a GPS head unit should probably just buy one. I spent $100 getting all
- * the supplies together to build the Bodgecycle Computer. For those same $100 I could
- * have bought a Lezyne Macro or Micro. Both have more functionality than the
- * Bodgecycle Computer.
- * 
- * Users who already own an arduino board might be especially interested. All they
- * will need to acquire will be a SparkFun GPS Logger Shield v2.0, a 9v battery, a 9v
- * battery hookup, a coin cell battery and a uSD card. Arduino users will likely
- * already own a good chunk of these supplies. So yeah. If you've read all this, you
- * should have an idea of whether or not Bodgecycle computer is for you.
- * 
+ *
+ * Bodgecycle Computer uses an Arduino Uno to record GPS information to a uSD
+ * card as a .gpx file. This .gpx file can then be uploaded to a website like
+ * Strava. This means that cyclists with an interest in Arduino can quickly
+ * have a working GPS unit that they can use instead of a smartphone. The
+ * advantage of this is that their phone battery will be left in tact.
+ *
+ * Cyclists who already have a dedicated GPS head unit will likely be more
+ * interested in continuing to use that rather than using the Bodgecycle
+ * Computer. Cyclists who just want a GPS head unit should probably just buy
+ * one. I spent $100 getting all the supplies together to build the Bodgecycle
+ * Computer. For those same $100 I could have bought a Lezyne Macro or Micro.
+ * Both have more functionality than the Bodgecycle Computer.
+ *
+ * Users who already own an arduino board might be especially interested. All
+ * they will need to acquire will be a SparkFun GPS Logger Shield v2.0, a 9v
+ * battery, a 9v battery hookup, a coin cell battery and a uSD card. Arduino
+ * users will likely already own a good chunk of these supplies. So yeah. If
+ * you've read all this, you should have an idea of whether or not Bodgecycle
+ * computer is for you.
+ *
  * Resources:
  *  TinyGPS++ Library  - https://github.com/mikalhart/TinyGPSPlus/releases
  *  SD Library (Built-in)
@@ -57,7 +60,7 @@
  *  Arduino IDE 1.8.2
  *  GPS Logger Shield v2.0 - Make sure the UART switch is set to SW-UART
  *  Arduino Uno R3
- * 
+ *
  * TODO:
  *  Introduce battery monitoring
  *  Reduce power usage
@@ -67,14 +70,14 @@
 #include <SD.h>
 #include <TinyGPS++.h>
 
-#define ARDUINO_USD_CS 10 // uSD card CS pin (pin 10 on SparkFun GPS Logger Shield)
+#define ARDUINO_USD_CS 10 // uSD card CS pin (pin 10: SparkFun GPS Shield)
 
 /////////////////////////
 // Log File Defintions //
 /////////////////////////
-// Keep in mind, the SD library has max file name lengths of 8.3 - 8 char prefix,
-// and a 3 char suffix.
-// Our log files are called "gpslogXX.csv, so "gpslog99.csv" is our max file.
+// Keep in mind, the SD library has max file name lengths of 8.3 - 8 char
+//  prefix, and a 3 char suffix.
+// Our log files are called "rideX.csv, so "ride8.csv" is our max file.
 #define LOG_FILE_PREFIX "ride" // Name of the log file.
 #define MAX_LOG_FILES 8 // Number of log files that can be made
 #define LOG_FILE_SUFFIX "gpx" // Suffix of the log file
@@ -107,8 +110,8 @@ SoftwareSerial ssGPS(ARDUINO_GPS_TX, ARDUINO_GPS_RX); // Create a SoftwareSerial
 // Arduino with a dedicated hardware serial port
 #define gpsPort ssGPS  // Alternatively, use Serial1 on the Leonardo
 
-// Define the serial monitor port. On the Uno, Mega, and Leonardo this is 'Serial'
-//  on other boards this may be 'SerialUSB'
+// Define the serial monitor port. On the Uno, Mega, and Leonardo this is
+//  'Serial' on other boards this may be 'SerialUSB'
 #define SerialMonitor Serial
 
 void setup()
@@ -128,11 +131,11 @@ void setup()
   {
     // Query the GPS unit
     getGPSData();
-    
+
     SerialMonitor.print(F("Checking for satellites. Current count: "));
     SerialMonitor.println(tinyGPS.satellites.value());
   }
-  updateFileName(); // Each time we start, create a new file, increment the number
+  updateFileName(); // Each time we start, create new file, increment the number
   printHeader(); // Print a header at the top of the new file
 }
 
@@ -181,7 +184,7 @@ byte logGPSData()
   { // Print longitude, latitude, altitude (in meters), date, and time
     // Scroll back 26 characters
     logFile.seek(logFile.size() - 26);
-    
+
     logFile.print(F("\t\t<trkpt lat=\""));
     logFile.print(tinyGPS.location.lat(), GPS_PRECISION);
     logFile.print(F("\" lon=\""));
@@ -196,13 +199,13 @@ byte logGPSData()
 
     // Close the trkpt tag
     logFile = SD.open(logFileName, FILE_WRITE);
-    
+
     if (logFile)
     {
       logFile.println(F("</trkpt>"));
-      
+
       logFile.close();
-      
+
       printFooter();
     }
     return 1; // Return success
@@ -223,40 +226,39 @@ void printHeader()
     logFile.println(F("<gpx version=\"1.1\" xmlns=\"http://www.topografix.com/GPX/1/1\" creator=\"BC by TR\">"));
     logFile.println(F("\t<metadata>"));
 
-    // Having two different kinds of name tag makes me think I can reduce my program's footprint by being DRY
+    // two different kinds of name tag; be more DRY
     logFile.println(F("\t\t<name>Ride</name>"));
     logFile.println(F("\t\t<author>"));
     logFile.println(F("\t\t\t<name>BC by TR</name>"));
     logFile.println(F("\t\t</author>"));
 
-    // The header needs a valid time stamp in it. To do this we need to get it from the GPS
+    // The header needs a valid time stamp in it. Get it from the GPS
     // Format the header to receive the timestamp
     logFile.print(F("\t\t"));
     logFile.close();
 
-    // The first two time stamps provided by the GPS module are consistently wrong
+    // The first two time stamps provided by the GPS module are always wrong
     for(uint8_t i = 0; i < 2; i++)
     {
       getGPSData();
     }
     printTime();
 
-    // Now we do the actual factual GPS tracking. These will only be opening tags.
+    // Now we do the actual factual GPS tracking.
     logFile = SD.open(logFileName, FILE_WRITE);
-    
+
     if(logFile)
     {
       logFile.println();
       logFile.println(F("\t</metadata>"));
       logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
-  
-      // The parts of this file that will follow this will be generated in other places.
+
       // If I do this right, all of the tags will be closed.
-  
+
       // Close the file.
-      logFile.close();
-  
-      printFooter();      
+      // logFile.close();
+
+      printFooter();
     }
   }
 }
@@ -272,15 +274,45 @@ void printTime()
     logFile.print(F("<time>"));
     logFile.print(tinyGPS.date.year());
     logFile.print(F("-"));
+
+    if(tinyGPS.date.month() < 10)
+    {
+      logFile.print(F("0"));
+    }
     logFile.print(tinyGPS.date.month());
+
     logFile.print(F("-"));
+
+    if(tinyGPS.date.day() < 10)
+    {
+      logFile.print(F("0"));
+    }
     logFile.print(tinyGPS.date.day());
+
     logFile.print(F("T"));
+
+    if(tinyGPS.time.hour() < 10)
+    {
+      logFile.print(F("0"));
+    }
     logFile.print(tinyGPS.time.hour());
+
     logFile.print(F(":"));
+
+    if(tinyGPS.time.minute() < 10)
+    {
+      logFile.print(F("0"));
+    }
     logFile.print(tinyGPS.time.minute());
+
     logFile.print(F(":"));
+
+    if(tinyGPS.time.second() < 10)
+    {
+      logFile.print(F("0"));
+    }
     logFile.print(tinyGPS.time.second());
+
     logFile.print(F("."));
     logFile.print(tinyGPS.time.centisecond());
     logFile.print(F("Z</time>"));
