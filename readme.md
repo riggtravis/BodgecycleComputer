@@ -184,6 +184,5 @@ that. You shouldn't worry about it too much, but it can happen.
 
 The goal of the Bodgecycle Computer project is to create something that can
 create data that can be uploaded and stored on the website
-[Strava](strava.com). I don't know right now if that will work. If you are
-interested in building a Bodgecycle Computer and testing this functionality, I
-would be very happy.
+[Strava](strava.com). This can be done by putting your micro SD card into an SD
+converter and then using the upload file interface on Strava.
