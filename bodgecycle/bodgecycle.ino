@@ -64,6 +64,7 @@
  * TODO:
  *  Introduce battery monitoring
  *  Reduce power usage
+ *    Find a way to see if bearing has changed
  */
 
 #include <SPI.h>
@@ -86,7 +87,7 @@ char logFileName[10]; // Char string to store the log file name
 //////////////////////
 // Log Rate Control //
 //////////////////////
-unsigned int log_rate = 1000 // Log every second
+unsigned int log_rate = 16384; // Start by logging every quarter of a minute
 unsigned long lastLog = 0; // Global var to keep of last time we logged
 
 /////////////////////////
@@ -114,6 +115,11 @@ SoftwareSerial ssGPS(ARDUINO_GPS_TX, ARDUINO_GPS_RX); // Create a SoftwareSerial
 //  'Serial' on other boards this may be 'SerialUSB'
 #define SerialMonitor Serial
 
+///////////////////////
+// BEARING VARIABLES //
+///////////////////////
+long int last_speed = 0;
+
 void setup()
 {
   SerialMonitor.begin(9600);
@@ -139,6 +145,8 @@ void setup()
       SerialMonitor.println(tinyGPS.satellites.value());
     }
   }
+  last_speed = tinyGPS.speed.kmph(); // Set last speed for later calculations
+  log_rate = 1024; // Start logging about once a second
   updateFileName(); // Each time we start, create new file, increment the number
   printHeader(); // Print a header at the top of the new file
 }
@@ -154,6 +162,17 @@ void loop()
       {
         SerialMonitor.println(F("GPS logged.")); // Print a debug message
         lastLog = millis(); // Update the lastLog variable
+
+        // Adjust the log rate based on the change in speed
+        if ( // If the speed has changed by 5 kmph, reset the log rate
+          last_speed - tinyGPS.speed.kmph() < 5 ||
+          tinyGPS.speed.kmph() - last_speed < 5)
+        {
+          log_rate = 1024;
+        } else if (!(log_rate >= 8192)) {
+          // At most wait about 8 seconds
+          log_rate = log_rate * 2;
+        }
       }
       else // If we failed to log GPS
       { // Print an error, don't update lastLog
