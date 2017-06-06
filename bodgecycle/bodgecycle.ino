@@ -86,7 +86,7 @@ char logFileName[10]; // Char string to store the log file name
 //////////////////////
 // Log Rate Control //
 //////////////////////
-#define LOG_RATE 1000 // Log every second
+unsigned int log_rate = 1000 // Log every second
 unsigned long lastLog = 0; // Global var to keep of last time we logged
 
 /////////////////////////
@@ -129,11 +129,15 @@ void setup()
   // Wait to start printing headers and such until there are enough satellites
   while (!tinyGPS.location.isUpdated())
   {
-    // Query the GPS unit
-    getGPSData();
+    // This code should make the gps tracker thrash less.
+    if ((lastLog + log_rate) <= millis())
+    {
+      // Query the GPS unit
+      getGPSData();
 
-    SerialMonitor.print(F("Checking for satellites. Current count: "));
-    SerialMonitor.println(tinyGPS.satellites.value());
+      SerialMonitor.print(F("Checking for satellites. Current count: "));
+      SerialMonitor.println(tinyGPS.satellites.value());
+    }
   }
   updateFileName(); // Each time we start, create new file, increment the number
   printHeader(); // Print a header at the top of the new file
@@ -142,8 +146,8 @@ void setup()
 void loop()
 {
   // It sure would be nice to have the log rate speed up once GPS is found.
-  if ((lastLog + LOG_RATE) <= millis())
-  { // If it's been LOG_RATE milliseconds since the last log:
+  if ((lastLog + log_rate) <= millis())
+  { // If it's been log_rate milliseconds since the last log:
     if (tinyGPS.location.isUpdated()) // If the GPS data is vaild
     {
       if (logGPSData()) // Log the GPS data
