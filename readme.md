@@ -85,9 +85,9 @@ the one I bought from SparkFun. It should be satisfactory enough.
 
 Users should also feel free to purchase parts from their choice of retailer. I
 used SparkFun because their website was easier for me to navigate than Adafruit
-and I wanted to buy everything from one place. SparkFun's miniature version
-of the GPS Logger Shield was also a big boon. I also, for personal reasons,
-did want to buy products that supported the developers of the Arduino boards.
+and I wanted to buy everything from one place. SparkFun's miniature version of
+the GPS Logger Shield was also a big boon. I also, for personal reasons, did
+want to buy products that supported the developers of the Arduino boards.
 Certain Arduino clones don't help support Arduino development. Where you fall
 on that philosophical line is up to you.
 
@@ -121,6 +121,12 @@ One note that I can share is that buying wholesale from China may require
 burning a new bootloader onto the chip that comes installed on your board. This
 isn't difficult if you already have an Arduino compatible board. If you don't,
 it might be really frustrating.
+
+An added bonus of the recommended RedBoard is that there are no through hole
+componenets that might accidentally be shorted in a jersey pocket containing
+something like a bicycle lock key. Not that I ever shorted anything by putting
+my computer in a jersey pocket with a bicycle lock key. Just be aware that
+doing that will likely cause a short curcuit which will reset the Arduino.
 
 ## Assembly
 This guide will assume that the user is familiar with
@@ -195,6 +201,13 @@ file you have recorded in some sort of
 ![Again, listen for a click](http://i.imgur.com/Gzp8oLM.jpg)
 
 ## Limitations
+However you take your Bodgecycle computer with you, be it in a sandwich bag, in
+a butter tub, in an enclosure on your bike, or just loose in a jersey pocket,
+please make cerain that there are no metal components that may accidentally
+come in contact with the solders on the back of any through hole soldered
+components. This is especially important to those using genuine Arduino Unos
+and clones with through hole components.
+
 A Bodgecycle Computer can only store 10 files at a time. Hopefully, this can
 represent at least a couple of days worth of rides. For the creator of the
 Bodgecycle Computer, this represents a little over a week's worth of bike
