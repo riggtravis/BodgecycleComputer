@@ -269,7 +269,10 @@ void printHeader()
 
     // Now we do the actual factual GPS tracking.
     logFile = SD.open(logFileName, FILE_WRITE);
-
+    while(!logFile){
+      logFile = SD.open(logFileName, FILE_WRITE);
+    }
+    
     if(logFile)
     {
       logFile.println();
