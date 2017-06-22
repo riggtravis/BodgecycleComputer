@@ -87,6 +87,7 @@ char logFileName[10]; // Char string to store the log file name
 //////////////////////
 // Log Rate Control //
 //////////////////////
+#define DATA_AGGRESSIVENESS 10 // Controls how often data logging is scaled
 unsigned int log_rate = 16384; // Start by logging every quarter of a minute
 unsigned long lastLog = 0; // Global var to keep of last time we logged
 
@@ -165,8 +166,8 @@ void loop()
 
         // Adjust the log rate based on the change in speed
         if ( // If the speed has changed by 5 kmph, reset the log rate
-          last_speed - tinyGPS.speed.kmph() < 5 ||
-          tinyGPS.speed.kmph() - last_speed < 5)
+          last_speed - tinyGPS.speed.kmph() < DATA_AGGRESSIVENESS ||
+          tinyGPS.speed.kmph() - last_speed < DATA_AGGRESSIVENESS)
         {
           log_rate = 1024;
         } else if (!(log_rate >= 8192)) {
