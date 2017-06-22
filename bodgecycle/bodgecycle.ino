@@ -272,20 +272,17 @@ void printHeader()
     while(!logFile){
       logFile = SD.open(logFileName, FILE_WRITE);
     }
-    
-    if(logFile)
-    {
-      logFile.println();
-      logFile.println(F("\t</metadata>"));
-      logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
 
-      // If I do this right, all of the tags will be closed.
+    logFile.println();
+    logFile.println(F("\t</metadata>"));
+    logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
 
-      // Close the file.
-      // logFile.close();
+    // If I do this right, all of the tags will be closed.
 
-      printFooter();
-    }
+    // Close the file.
+    logFile.close();
+
+    printFooter();
   }
 }
 
