@@ -200,6 +200,13 @@ file you have recorded in some sort of
 ![Into the computer](http://i.imgur.com/eROZaRi.jpg)
 ![Again, listen for a click](http://i.imgur.com/Gzp8oLM.jpg)
 
+## Contributing
+You want to contribute? That's great! We would love to welcome you aboard. There are just a few things
+you should know first. They are laid out in our
+[Code of Conduct](https://github.com/riggtravis/BodgecycleComputer/blob/master/CODE_OF_CONDUCT.md) and
+[Contributing Guide](https://github.com/riggtravis/BodgecycleComputer/blob/master/CONTRIBUTING.md).
+Please go and read them before you do anything else.
+
 ## Limitations
 However you take your Bodgecycle computer with you, be it in a sandwich bag, in
 a butter tub, in an enclosure on your bike, or just loose in a jersey pocket,
