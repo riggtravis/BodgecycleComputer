@@ -3,8 +3,14 @@ The bodged together bicycle computer for hackers.
 ![A picture of my Bodgecycle Computer](http://i.imgur.com/aNQw7sG.jpg)
 
 In order to use Bodgecycle Computer you will need the following components:
-1. An [Arduino Uno](https://www.arduino.cc/en/Main/arduinoBoardUno) or [compatible board](https://www.sainsmart.com/arduino/control-boards/sainsmart-uno-r3-atmega328-au-development-board-compatible-with-arduino-uno-r3.html)
-2. A USB cable compatible with your chosen Arduino board
+1. An [Arduino Uno](https://www.arduino.cc/en/Main/arduinoBoardUno) [compatible board](https://www.sainsmart.com/arduino/control-boards/sainsmart-uno-r3-atmega328-au-development-board-compatible-with-arduino-uno-r3.html)
+  * Just as a heads up, I have recommendations about where and who from to get
+your Arduino compatible board
+  * You can buy official Arduino boards, but as of June 12th, 2017, I no longer
+recommend them
+  * Discussion about why I no longer recommend them are included in the
+recommendations below
+2. A USB cable compatible with your chosen Arduino compatible board
 3. A [SparkFun GPS Logger Shield](https://www.sparkfun.com/products/13750)
 4. An [Arduino stackable header set](https://www.sparkfun.com/products/11417)
 5. A [12mm coin cell battery](https://www.sparkfun.com/products/337)
@@ -18,16 +24,24 @@ In order to use Bodgecycle Computer you will need the following components:
     * EBL High Volume: Rechargable. So that's fun.
     * Duracell Coppertop: Yup.
 8. A [9v battery holder](https://www.adafruit.com/product/67)
-9. A [sandwich bag](https://www.amazon.com/Glad-Food-Storage-Snack-Zipper/dp/B00ZKUCFUS/ref=sr_1_4_s_it?ie=UTF8&qid=1492750504&sr=1-4) for wet rides
+9. A [sandwich bag](https://www.amazon.com/Glad-Food-Storage-Snack-Zipper/dp/B00ZKUCFUS/ref=sr_1_4_s_it?ie=UTF8&qid=1492750504&sr=1-4)
+for wet rides or some sort of [butter tub](https://www.landolakes.com/products/butter/tubs/butter-with-canola-oil/)
 
 I sourced all of these parts except for the sandwich bag from
 [SparkFun](https://www.sparkfun.com/). The sandwich bag I got at a
-[Food Lion](https://www.foodlion.com/). Also the first 9v battery I had went
-dead. The new one came from a [Tractor Supply](https://www.tractorsupply.com/).
-Philosophical discussion of where to source things to come later. The total
-cost of the parts I used was about \$100. Some of the parts I used were
-unnecessary. The parts that are listed here cost about \$91.20. I also used an
-Arduino Uno, which is perhaps not
+[Food Lion](https://www.foodlion.com/). When I use a butter tub instead of a
+sandwich bag, I use an old butter tub that I probably also got at a Food Lion,
+though it might have been a Kroger, or even a Wades. Also the first 9v battery
+I had went dead. For a while I used one by JobSmart which is the house brand of
+[Tractor Supply](https://www.tractorsupply.com/).
+
+These days I am using a Duracell Procell because it can operate under
+vibrations better than previous batteries I used. Just as a heads up, your
+bicycle computer is going to get vibrated. The reason for this is that it is on
+a bicycle. Philosophical discussion of where to source things to come later.
+The total cost of the parts I used was about \$100. Some of the parts I used
+were unnecessary. The parts that are listed here cost about \$91.20. I also
+used an Arduino Uno, which is perhaps not
 [the cheapest Arduino Uno compatible board](http://www.electrodragon.com/product/arduino-compatible-visduino-uno-r3/).
 A person using a SparkFun [RedBoard](https://www.sparkfun.com/products/13975)
 and a minimum of parts could probably build a Bodgecycle Computer for $86.20
@@ -45,15 +59,18 @@ their board of choice.
 
 It is worth noting that I have done a little bit of testing with a Diavolino.
 It didn't work for me, but all I did was plug in the shield, see that it didn't
-work, and then added this statement to this readme file.
+work, and then added this statement to this readme file. It's possible that
+someone less lazy than me who was dedicated to making it work with a Diavolino
+could do that.
 
 Bottom line, if you want to use a different board, feel free to do so, but
 don't think it's my responsibility to bail you out, or to accept your fixes to
-your problems. If you create a pull request that doesn't work with the Arduino
-Uno R3, I'm not going to merge it. If you create a pull request that works with
-your board and it still works with the Arduino Uno R3, I will probably accept
-this change. If someone creates a pull request that I merge that breaks another
-board I don't care about, you're going to be sorta on your own.
+your problems into the Bodgecycle Computer codebase via a pull request. If you
+create a pull request that doesn't work with the Arduino Uno R3, I'm not going
+to merge it. If you create a pull request that works with your board and it
+still works with the Arduino Uno R3, I will probably accept this change. If
+someone creates a pull request that I merge that breaks another board I don't
+care about, you're going to be sorta on your own.
 
 Users who are satisfied with the first version of the Bodgecycle Computer can
 also save some money by getting
@@ -68,9 +85,9 @@ the one I bought from SparkFun. It should be satisfactory enough.
 
 Users should also feel free to purchase parts from their choice of retailer. I
 used SparkFun because their website was easier for me to navigate than Adafruit
-and I wanted to buy everything from one place. SparkFun's miniature version
-of the GPS Logger Shield was also a big boon. I also, for personal reasons,
-did want to buy products that supported the developers of the Arduino boards.
+and I wanted to buy everything from one place. SparkFun's miniature version of
+the GPS Logger Shield was also a big boon. I also, for personal reasons, did
+want to buy products that supported the developers of the Arduino boards.
 Certain Arduino clones don't help support Arduino development. Where you fall
 on that philosophical line is up to you.
 
@@ -82,6 +99,34 @@ never been to a Tractor Supply during Chick Days without at least one dead
 chicken that they refuse to remove and a chick habitat without enough water or
 food. I have no problem owning animals. I own several in fact. I do have a
 problem with letting them starve to death.
+
+### On Arduino Uno compatible boards
+I used an Arduino Uno when I built the first (and as far as I know only)
+Bodgecycle Computer. At the time this made sense because it was easy to acquire
+and I wanted to support the continued development of Arduino boards. The
+Arduino organization has since gone through leadership changes that users
+should be wary of. I recommend using a SparkFun RedBoard. There are other
+cheaper boards, but the RedBoard helps SparkFun develop new boards.
+
+Other alternatives incude:
+* [Canaduino Uno](https://universal-solder.com/product/canaduino-uno-bone-basic-diy-arduino-uno/)
+* [Sanjay Technologies ST1](https://www.indiamart.com/proddetail/st1-8348862762.html)
+* [SainSmart Uno](https://www.sainsmart.com/sainsmart-uno-r3-atmega328-au-development-board-compatible-with-arduino-uno-r3.html)
+* [CT Uno](https://www.cytron.com.my/p-ct-uno)
+* [Freetronics Eleven](https://www.freetronics.com.au/products/eleven)
+* [Alorium XLR8](http://www.aloriumtech.com/xlr8/)
+* [Wholesale from China](https://www.aliexpress.com/item/high-quality-One-set-UNO-R3-CH340G-MEGA328P-for-Arduino-UNO-R3-NO-USB-CABLE/32680845470.html)
+
+One note that I can share is that buying wholesale from China may require
+burning a new bootloader onto the chip that comes installed on your board. This
+isn't difficult if you already have an Arduino compatible board. If you don't,
+it might be really frustrating.
+
+An added bonus of the recommended RedBoard is that there are no through hole
+componenets that might accidentally be shorted in a jersey pocket containing
+something like a bicycle lock key. Not that I ever shorted anything by putting
+my computer in a jersey pocket with a bicycle lock key. Just be aware that
+doing that will likely cause a short curcuit which will reset the Arduino.
 
 ## Assembly
 This guide will assume that the user is familiar with
@@ -155,7 +200,21 @@ file you have recorded in some sort of
 ![Into the computer](http://i.imgur.com/eROZaRi.jpg)
 ![Again, listen for a click](http://i.imgur.com/Gzp8oLM.jpg)
 
+## Contributing
+You want to contribute? That's great! We would love to welcome you aboard. There are just a few things
+you should know first. They are laid out in our
+[Code of Conduct](https://github.com/riggtravis/BodgecycleComputer/blob/master/CODE_OF_CONDUCT.md) and
+[Contributing Guide](https://github.com/riggtravis/BodgecycleComputer/blob/master/CONTRIBUTING.md).
+Please go and read them before you do anything else.
+
 ## Limitations
+However you take your Bodgecycle computer with you, be it in a sandwich bag, in
+a butter tub, in an enclosure on your bike, or just loose in a jersey pocket,
+please make cerain that there are no metal components that may accidentally
+come in contact with the solders on the back of any through hole soldered
+components. This is especially important to those using genuine Arduino Unos
+and clones with through hole components.
+
 A Bodgecycle Computer can only store 10 files at a time. Hopefully, this can
 represent at least a couple of days worth of rides. For the creator of the
 Bodgecycle Computer, this represents a little over a week's worth of bike
@@ -184,6 +243,5 @@ that. You shouldn't worry about it too much, but it can happen.
 
 The goal of the Bodgecycle Computer project is to create something that can
 create data that can be uploaded and stored on the website
-[Strava](strava.com). I don't know right now if that will work. If you are
-interested in building a Bodgecycle Computer and testing this functionality, I
-would be very happy.
+[Strava](strava.com). This can be done by putting your micro SD card into an SD
+converter and then using the upload file interface on Strava.
