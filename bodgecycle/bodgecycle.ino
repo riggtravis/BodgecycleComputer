@@ -269,20 +269,17 @@ void printHeader()
 
     // Now we do the actual factual GPS tracking.
     logFile = SD.open(logFileName, FILE_WRITE);
-    while(!logFile){
-      logFile = SD.open(logFileName, FILE_WRITE);
+    if(logFile) {
+      logFile.println();
+      logFile.println(F("\t</metadata>"));
+      logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
+  
+      // If I do this right, all of the tags will be closed.
+  
+      // Close the file.
+      logFile.close();
+      printFooter();
     }
-
-    logFile.println();
-    logFile.println(F("\t</metadata>"));
-    logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
-
-    // If I do this right, all of the tags will be closed.
-
-    // Close the file.
-    logFile.close();
-
-    printFooter();
   }
 }
 
