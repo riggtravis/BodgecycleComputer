@@ -87,7 +87,7 @@ char logFileName[10]; // Char string to store the log file name
 //////////////////////
 // Log Rate Control //
 //////////////////////
-#define DATA_AGGRESSIVENESS 10 // Controls how often data logging is scaled
+#define DATA_AGGRESSIVENESS 15 // Controls how often data logging is scaled
 unsigned int log_rate = 16384; // Start by logging every quarter of a minute
 unsigned long lastLog = 0; // Global var to keep of last time we logged
 
