@@ -87,7 +87,7 @@ char logFileName[10]; // Char string to store the log file name
 //////////////////////
 // Log Rate Control //
 //////////////////////
-#define DATA_AGGRESSIVENESS 15 // Controls how often data logging is scaled
+#define DATA_AGGRESSIVENESS 12 // Controls how often data logging is scaled
 unsigned int log_rate = 16384; // Start by logging every quarter of a minute
 unsigned long lastLog = 0; // Global var to keep of last time we logged
 
@@ -274,9 +274,9 @@ void printHeader()
       logFile.println();
       logFile.println(F("\t</metadata>"));
       logFile.println(F("\t<trk><name>Ride</name><trkseg>"));
-  
+
       // If I do this right, all of the tags will be closed.
-  
+
       // Close the file.
       logFile.close();
       printFooter();
